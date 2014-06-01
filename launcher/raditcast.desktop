@@ -1,0 +1,14 @@
+[Desktop Entry]
+Comment[es]=RaditCast es una aplicación para crear realizar streaming.
+Comment=RaditCast es una aplicación para crear realizar streaming.
+Exec=raditcast
+GenericName[es]=Raditcast
+GenericName=Raditcast
+Icon=/usr/share/pixmaps/raditcast.svg
+Name[es]=Raditcast
+Name=Raditcast
+StartupNotify=true
+Terminal=false
+Type=Application
+Version=1.0
+Categories=AudioVideo;Player;Music;Multimedia;Qt;

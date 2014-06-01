@@ -1,0 +1,65 @@
+#-------------------------------------------------
+#
+# Project created by QtCreator 2012-02-08T09:57:26
+#
+#-------------------------------------------------
+
+QT       += core gui
+
+TARGET = raditcast
+TEMPLATE = app
+
+
+SOURCES += main.cpp\
+        mainwindow.cpp
+
+HEADERS  += mainwindow.h
+
+FORMS    += mainwindow.ui
+
+
+
+
+
+
+
+# -------------------------------------------------
+# mis lib
+# -------------------------------------------------
+
+
+win32 {
+
+LIBS += ..\lib\bass\bass.lib \
+        ..\lib\bassenc\bassenc.lib \
+        ..\lib\vumeter\libqvumeterplug.a
+
+
+INCLUDEPATH = ..\lib\bass \
+              ..\lib\bassenc \
+              ..\lib\vumeter
+
+}
+
+
+unix {
+
+LIBS += /usr/lib/libbass.so \
+        /usr/lib/libbassenc.so \
+        /usr/lib/libqvumeterplug.so
+
+
+INCLUDEPATH = ../lib/bass \
+              ../lib/bassenc \
+              ../lib/vumeter
+
+
+}
+
+OTHER_FILES +=
+
+RESOURCES += \
+    radit.qrc
+
+RC_FILE = radit.rc
+

@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>443</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>RaditCast Encoders</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="radit.qrc">
+    <normaloff>:/general/iconos/player/ico.png</normaloff>:/general/iconos/player/ico.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(33, 48, 58);
+color: rgb(255, 255, 255);</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>401</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0.994318, y1:1, x2:1, y2:0, stop:0 rgba(2, 37, 90, 255), stop:1 rgba(11, 157, 247, 255));</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QPushButton" name="BtnPlay">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="toolTip">
+        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; color:#0c0c0c;&quot;&gt;Comenzar la emisión&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+     border: 1px solid #000000;
+     border-radius:4px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #f6f7fa, stop: 1 #dadbde);
+     min-width: 30px;
+font: 75 11pt &quot;MS Shell Dlg 2&quot;;
+ }
+
+ QPushButton:pressed {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
+ }
+
+ QPushButton:flat {
+     border: none; /* no border for a flat push button */
+ }
+
+QPushButton:hover {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #f5b14e, stop: 1 #fff9ef);
+ }
+
+ QPushButton:default {
+     border-color: navy; /* make the default button prominent */
+ }
+    </string>
+       </property>
+       <property name="icon">
+        <iconset resource="radit.qrc">
+         <normaloff>:/general/iconos/player/play.png</normaloff>:/general/iconos/player/play.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="BtnStop">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="toolTip">
+        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; color:#111111;&quot;&gt;Detener la emisión&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+     border: 1px solid #000000;
+     border-radius:4px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #f6f7fa, stop: 1 #dadbde);
+     min-width: 30px;
+font: 75 11pt &quot;MS Shell Dlg 2&quot;;
+ }
+
+ QPushButton:pressed {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
+ }
+
+ QPushButton:flat {
+     border: none; /* no border for a flat push button */
+ }
+
+QPushButton:hover {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #f5b14e, stop: 1 #fff9ef);
+ }
+
+ QPushButton:default {
+     border-color: navy; /* make the default button prominent */
+ }
+    </string>
+       </property>
+       <property name="icon">
+        <iconset resource="radit.qrc">
+         <normaloff>:/general/iconos/player/stop.png</normaloff>:/general/iconos/player/stop.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QVUMeter" name="Vu">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>50</y>
+      <width>41</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>VU Meter</string>
+    </property>
+    <property name="whatsThis">
+     <string>VU Meter</string>
+    </property>
+    <property name="maxValue">
+     <double>120.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>351</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 1px solid rgb(27, 128, 217);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="3" column="2" colspan="2">
+      <widget class="QLineEdit" name="EditNombre"/>
+     </item>
+     <item row="6" column="3">
+      <widget class="QLineEdit" name="EditDescripcion"/>
+     </item>
+     <item row="5" column="2" colspan="2">
+      <widget class="QLineEdit" name="EditGenero"/>
+     </item>
+     <item row="0" column="0" colspan="3">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>Dispositivo</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QComboBox" name="ComboIn"/>
+     </item>
+     <item row="1" column="0" colspan="2">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Server</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2" colspan="2">
+      <widget class="QLineEdit" name="EditServer"/>
+     </item>
+     <item row="3" column="0" colspan="2">
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>Nombre</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="Url">
+       <property name="text">
+        <string>Url</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1" colspan="3">
+      <widget class="QLineEdit" name="EditUrl"/>
+     </item>
+     <item row="5" column="0" colspan="2">
+      <widget class="QLabel" name="Genero">
+       <property name="text">
+        <string>Género</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0" colspan="3">
+      <widget class="QLabel" name="label_6">
+       <property name="text">
+        <string>Descripción</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0" colspan="4">
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Password</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="EditPassword"/>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>220</y>
+      <width>391</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 1px solid rgb(27, 128, 217);</string>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="1" column="3">
+      <widget class="QCheckBox" name="checkMonitor">
+       <property name="toolTip">
+        <string>Activar/Desctivar monitores</string>
+       </property>
+       <property name="text">
+        <string>Monitor</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0" colspan="3">
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLabel" name="label_7">
+         <property name="text">
+          <string>Bitrate</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="ComboBirate">
+         <property name="currentIndex">
+          <number>8</number>
+         </property>
+         <item>
+          <property name="text">
+           <string>32</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>40</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>48</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>56</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>64</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>80</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>96</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>112</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>128</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>160</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>192</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>224</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>256</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>320</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="1" column="0">
+      <widget class="QRadioButton" name="RadioMp3">
+       <property name="text">
+        <string>Mp3</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QRadioButton" name="RadioOgg">
+       <property name="text">
+        <string>Ogg</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QRadioButton" name="RadioAac">
+       <property name="text">
+        <string>AAC+</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3">
+      <widget class="QCheckBox" name="checkAutoPlay">
+       <property name="toolTip">
+        <string>Hace Play al arrancar</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">  background-color: rgb(33, 48, 58);
+color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>Auto Play</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0" colspan="4">
+      <widget class="QLabel" name="LabelCurrentSound">
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(0, 0, 0);
+color: rgb(0, 255, 0);
+</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QTextEdit" name="TLog">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>320</y>
+      <width>391</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>1</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <family>MS Shell Dlg 2</family>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(92, 135, 206);
+color: rgb(255, 255, 255);
+
+
+border-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOn</enum>
+    </property>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:72;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="textInteractionFlags">
+     <set>Qt::NoTextInteraction</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>300</y>
+      <width>361</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(2, 52, 126, 255), stop:0.98 rgba(255, 255, 255, 255), stop:1 rgba(0, 0, 0, 0));
+
+
+color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Log de Emisión</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BtnLimpiar">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>300</y>
+      <width>32</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Limpiar Log de emisión</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+     border: 1px solid #000000;
+     border-radius:4px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #f6f7fa, stop: 1 #dadbde);
+     min-width: 30px;
+font: 75 11pt &quot;MS Shell Dlg 2&quot;;
+ }
+
+ QPushButton:pressed {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
+ }
+
+ QPushButton:flat {
+     border: none; /* no border for a flat push button */
+ }
+
+QPushButton:hover {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #f5b14e, stop: 1 #fff9ef);
+ }
+
+ QPushButton:default {
+     border-color: navy; /* make the default button prominent */
+ }
+    </string>
+    </property>
+    <property name="icon">
+     <iconset resource="radit.qrc">
+      <normaloff>:/general/iconos/player/purge.png</normaloff>:/general/iconos/player/purge.png</iconset>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>420</y>
+      <width>141</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>www.radit.org                          </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>420</y>
+      <width>46</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ver 1.0.4</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QVUMeter</class>
+   <extends>QWidget</extends>
+   <header>qvumeter.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="radit.qrc"/>
+ </resources>
+ <connections/>
+</ui>
